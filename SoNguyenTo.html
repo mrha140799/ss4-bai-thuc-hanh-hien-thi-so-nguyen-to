@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeGym</title>
+</head>
+<body>
+<table id="tbId">
+</table>
+<script>
+    var tbId = document.getElementById("tbId");
+    var htmlStr = "<tr><td>2</td>";
+
+    var kt =0;
+
+    for (var i = 3 ; i <= 100 ; i++) {
+
+        var dem = 0;
+        for (var j =2 ; j < i ; j ++) {
+            if (i %j == 0) {
+                dem++;
+            }
+        }
+        if (dem ==0) {
+            htmlStr += "<td>";
+            htmlStr +=  i;
+            htmlStr += "</td>";
+            kt++;
+        }
+        if (kt == 19) {
+            break;
+        }
+
+    }
+    htmlStr += "</tr>";
+    tbId.innerHTML = htmlStr;
+
+</script>
+<style>
+    td {
+
+        border: 2px solid black;
+    }
+    table {
+        margin-top: 250px;
+        margin-left: 300px;
+        text-align: center;
+        width: 1000px;
+        border: 2px solid black;
+    }
+</style>
+</body>
+</html>
